@@ -1,0 +1,25 @@
+server:
+  port: 8083
+  servlet:
+    context-path: /rating-service
+
+spring:
+  application:
+    name: rating-service
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/rating_service
+      auto-index-creation: true
+
+mongodb:
+  database:
+    name: rating_service
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8080/eureka
